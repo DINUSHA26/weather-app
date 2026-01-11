@@ -18,10 +18,10 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // ⛔ Wait until Auth0 is ready
+    //  Wait until Auth0 is ready
     if (isLoading) return;
 
-    // ⛔ If not logged in, redirect safely
+    //  If not logged in, redirect safely
     if (!isAuthenticated) {
       loginWithRedirect();
       return;
@@ -47,7 +47,7 @@ export default function Dashboard() {
     loginWithRedirect,
   ]);
 
-  // 🔄 Auth0 session restoring
+  //  Auth0 session restoring
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-100">
@@ -59,7 +59,7 @@ export default function Dashboard() {
     );
   }
 
-  // 🔄 Data loading
+  //  Data loading
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-100">

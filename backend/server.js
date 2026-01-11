@@ -5,7 +5,7 @@ import weatherRoutes from './routes/weatherRoutes.js';
 
 const app = express();
 
-app.use(cors()); // CORS දෝෂය වැළැක්වීමට
+app.use(cors()); // To prevent CORS errors
 app.use(express.json());
 
 // API Endpoints

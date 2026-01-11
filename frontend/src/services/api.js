@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api'; // ඔබේ Backend URL එක මෙහි යොදන්න
+const API_BASE_URL = 'http://localhost:5000/api'; // Backend server URL
 
 export const fetchWeatherData = async (token) => {
   try {
     const response = await axios.get(`${API_BASE_URL}/weather`, {
       headers: {
-        Authorization: `Bearer ${token}` // Auth0 මගින් ලැබෙන Token එක [cite: 10]
+        Authorization: `Bearer ${token}` // Include Auth0 token in request headers
       }
     });
     return response.data;
