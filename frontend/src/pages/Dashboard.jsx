@@ -77,7 +77,7 @@ export default function Dashboard() {
       <Navbar />
 
       {/* Dashboard Content */}
-      <div className="p-6 md:p-10 max-w-7xl mx-auto">
+      <div className="p-6 md:p-10 max-w-7xl mx-auto bg-gradient-to-br from-blue-500 via-sky-400 to-indigo-600">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">
