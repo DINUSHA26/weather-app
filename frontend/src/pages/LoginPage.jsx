@@ -1,4 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import { WiDayCloudy } from "react-icons/wi";
+import { FiLock } from "react-icons/fi";
 
 const LoginPage = () => {
   const { loginWithRedirect } = useAuth0();
@@ -10,7 +12,9 @@ const LoginPage = () => {
       <div className="bg-white shadow-2xl rounded-2xl p-10 w-[350px] text-center">
         
         {/* Logo / Icon */}
-        <div className="text-5xl mb-4">🌤️</div>
+        <div className="flex justify-center text-6xl text-blue-500 mb-4">
+          <WiDayCloudy />
+        </div>
 
         {/* Title */}
         <h1 className="text-2xl font-bold text-gray-800">
@@ -26,9 +30,11 @@ const LoginPage = () => {
         <button
           onClick={() => loginWithRedirect()}
           className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold text-lg
-                     hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+                     hover:bg-blue-700 hover:scale-105 transition-all duration-300
+                     flex items-center justify-center gap-2"
         >
-          🔐 Login with Auth0
+          <FiLock className="text-xl" />
+          Login with Auth0
         </button>
 
         {/* Footer text */}

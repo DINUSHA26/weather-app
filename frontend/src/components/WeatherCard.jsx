@@ -1,3 +1,5 @@
+import { WiDaySunny, WiCloudy, WiSnow } from "react-icons/wi";
+
 export default function WeatherCard({ city }) {
   return (
     <div className="relative bg-white/90 backdrop-blur-md p-6 rounded-3xl 
@@ -24,8 +26,14 @@ export default function WeatherCard({ city }) {
 
       {/* Weather Icon */}
       <div className="flex items-center justify-center my-6">
-        <div className="text-6xl">
-          {city.temp > 30 ? "☀️" : city.temp > 20 ? "⛅" : "❄️"}
+        <div className="text-6xl text-blue-500">
+          {city.temp > 30 ? (
+            <WiDaySunny />
+          ) : city.temp > 20 ? (
+            <WiCloudy />
+          ) : (
+            <WiSnow />
+          )}
         </div>
       </div>
 
@@ -42,7 +50,7 @@ export default function WeatherCard({ city }) {
 
         <div className="text-right">
           <p className="text-xs uppercase tracking-wide text-gray-400">
-            Comfort
+            Comfort index
           </p>
           <p className="text-3xl font-black text-green-500">
             {city.comfortScore}
